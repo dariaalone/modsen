@@ -1,0 +1,32 @@
+"use strict";
+
+function testScope() {
+  if (true) {
+    var xVar = "var inside block";
+  }
+
+  if (true) {
+    let xLet = "let inside block";
+    console.log("Inside block, xLet:", xLet); 
+  }
+
+  if (true) {
+    const xConst = "const inside block";
+    console.log("Inside block, xConst:", xConst); 
+  }
+
+  console.log("Outside block, xVar:", xVar); 
+  try {
+    console.log("Outside block, xLet:", xLet); 
+  } catch (e) {
+    console.log("Outside block, xLet: Error -", e.message);
+  }
+
+  try {
+    console.log("Outside block, xConst:", xConst);
+  } catch (e) {
+    console.log("Outside block, xConst: Error -", e.message);
+  }
+}
+
+testScope();
