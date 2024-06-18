@@ -1,0 +1,13 @@
+"use strict";
+
+function increaseByTenPercent(numbers) {
+  return numbers.map(number => number * 1.1);
+}
+
+const numbers1 = [10, 20, 30, 40, 50];
+const increasedNumbers1 = increaseByTenPercent(numbers1);
+console.log(increasedNumbers1); 
+
+const numbers2 = [5, 15, 25];
+const increasedNumbers2 = increaseByTenPercent(numbers2);
+console.log(increasedNumbers2);
