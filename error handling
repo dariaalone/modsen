@@ -1,0 +1,13 @@
+function checkInteger(num) {
+  if (!Number.isInteger(num)) {
+    throw new Error('The provided value is not an integer.');
+  }
+  console.log('The provided value is an integer.');
+}
+
+try {
+  checkInteger(5); 
+  checkInteger(5.5); 
+} catch (error) {
+  console.error(error.message);
+}
