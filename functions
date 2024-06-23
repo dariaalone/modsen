@@ -1,0 +1,19 @@
+function repeatOperation(operation, interval) {
+    if (typeof operation !== 'function') {
+        throw new Error('First argument must be a function');
+    }
+    if (typeof interval !== 'number') {
+        throw new Error('Second argument must be a number');
+    }
+
+    const intervalId = setInterval(operation, interval);
+
+    return intervalId;
+}
+
+const intervalId = repeatOperation(() => {
+    console.log('This operation is repeated every 2 seconds');
+}, 2000);
+
+// To stop the repeated execution, use clearInterval with the intervalId
+// clearInterval(intervalId);
